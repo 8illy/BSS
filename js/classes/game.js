@@ -48,6 +48,15 @@ class Game{
 		return this.piles[playerName]?this.piles[playerName][pile]:undefined;
 	}
 	
+	
+	updatePhase(){
+		
+		dbClient.sendToOpponent({
+			action : "phase",
+			value : this.ui.phaseSelector.val(),
+		})
+	}
+	
 	loadReplay(deckFile){	
 		//read the file.
 		let fr=new FileReader();

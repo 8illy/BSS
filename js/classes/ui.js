@@ -17,6 +17,7 @@ class UI{
 		this.boardContainer = $("#boardContainer");
 		this.fieldContainer = $("#fieldContainer");
 		this.userLoginSelector = $("#dbUserSelector");
+		this.phaseSelector = $("#phase");
 		
 		this.views = $(".view");
 		

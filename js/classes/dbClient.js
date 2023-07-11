@@ -547,6 +547,8 @@ class DBClient{
 			
 
 			$("#opponentForm").hide();
+		}else if(data.action=="phase"){
+			game.ui.phaseSelector.val(data.value)
 		}else if(data.action=="Move To"){
 			let index = data.index;
 			let id = data.id;
