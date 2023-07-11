@@ -341,7 +341,12 @@ div#logOutput {
 }
 
 .lifeDisplay {
-    width: 45%;
+    width: 40%;
+    display: inline-block;
+}
+
+#phaseContainer{
+	width: 10%;
     display: inline-block;
 }
 

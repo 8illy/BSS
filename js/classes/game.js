@@ -50,8 +50,7 @@ class Game{
 	
 	
 	updatePhase(){
-		
-		dbClient.sendToOpponent({
+		game.dbClient.sendToOpponent({
 			action : "phase",
 			value : this.ui.phaseSelector.val(),
 		})
