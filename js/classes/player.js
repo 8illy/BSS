@@ -4,7 +4,7 @@ class Player{
 		this.player = player;
 		
 		this.cardUidCount = 1;
-		this.life = 6;
+		this.life = STARTINGLIFE;
 		
 		this.rawTxtDecklist = "";
 		
@@ -82,7 +82,7 @@ class Player{
 	}
 	
 	reset(oppAction){
-		this.life = 6;
+		this.life = STARTINGLIFE;
 		this.emptyPiles();
 		this.loadDeck();
 		this.render();

@@ -14,3 +14,5 @@ PILE_TRASH = "Trash";
 PILE_GENERIC = "Generic";
 
 ISYUGIOHMODE = window.location.search=="?yugioh=1";
+
+STARTINGLIFE = 6;
