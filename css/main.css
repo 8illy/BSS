@@ -1,0 +1,357 @@
+html{
+-webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */	
+
+	--mtg-bg-colour : #444;
+	--mtg-fg-colour : #7f7f7f;
+	--mtg-input-colour : #9e9e9e;
+	--mtg-selected-colour : green;
+	--mtg-invalid-colour : red;
+}
+
+
+#loadingContainer{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--mtg-fg-colour);
+    z-index: 8888;
+    opacity: 50%;
+}
+
+#loadingSpinner{
+    width: 20vw;
+    height: 20vw;
+    margin: auto;
+    position: relative;
+    display: block;
+    margin-top: 20vh;
+    z-index: 888888;
+	border-width:20px;
+}
+
+#fieldContainer .row {
+    height: 150px;
+}
+
+.playerPile.playerDeck .cardImg {
+    transition-property: transform;
+}
+
+.playerHand{
+	min-height:130px; /*to enable drag card into empty hand.*/
+}
+
+.container.field {
+    max-width: unset;
+}
+
+.playerSide:nth-child(1) {
+    rotate: 180deg;
+}
+
+.playerSide {
+
+}
+
+.pile{
+	margin-top: 10px;
+	position:relative;
+}
+
+.cardFrame {
+    display: inline;
+    margin-right: 10px;
+}
+
+.playerHand {
+    text-align: center;
+}
+
+.playerHand .cardFrame {
+    margin-left: -30px;
+}
+
+.playerHand img.cardImg {
+    transform-origin: center;
+}
+
+#boardContainer {
+    width: 100%;
+    max-width: unset;
+}
+
+.playerLands .tapped,
+.playerCreatures .tapped,
+.playerArtifacts .tapped{
+	rotate:270deg;
+}
+
+.playerHand .tapped{
+	rotate:0deg;
+	border:3px solid gold;
+}
+
+#cardPreviewContainer {
+    padding-top: 5px;
+}
+
+#cardPreviewContainer > .cardFrame, 
+#cardPreviewContainer > .cardFrame > .cardImg {
+    width: 100%;
+}
+
+.cardImg:not(.largeCardImg) {
+    height: 130px;
+    width: auto;
+	margin-bottom:5px;
+}
+
+.overflownPile .cardImg{
+	height:60px;
+}
+
+.playerPile {
+    height: 100%;
+}
+
+
+body{
+	background-color: var(--mtg-bg-colour)!important;
+}
+
+input, button {
+    background:var(--mtg-input-colour)!important;
+}
+
+.sidebarBox{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--mtg-fg-colour);
+    margin-top: 5px;
+    text-align: center;
+	display:none;
+}
+
+.sidebarBoxSelected{
+	display:block;
+}
+
+.sidebarBoxTabStripItem.sidebarBoxTabStripItemSelected{
+	background:var(--mtg-selected-colour);
+}
+
+#viewPileContainer {
+    height: 225px;
+}
+
+.sidebarBoxTabStripItem {
+    display: inline-block;
+    background: var(--mtg-fg-colour);
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+}
+
+div#sidebarBoxTabStrip {
+    margin-top: 10px;
+}
+
+.activeAction{
+	background:var(--mtg-selected-colour)!important;
+}
+
+input#scryNumber {
+    width: 30px;
+}
+
+#gameControls .row {
+    height: 35px;
+}
+
+input#replayTimer {
+    width: 80px;
+}
+
+.controlRow > .controlRowInner {
+    text-align: right;
+    width: 60%;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 5px;
+}
+
+.playerLife {
+    width: 50px;
+}
+
+#pileDisplayModal > .modal-dialog {
+    margin: 0;
+    height: 100%;
+}
+
+div#pileDisplayModal {
+    width: 25%;
+    height: 30vh;
+    margin-left: 10px;
+    top: 70vh;
+}
+
+.modal-backdrop.show {
+    display:none;
+}
+
+#pileDisplayModal > .modal-dialog > .modal-content{
+	height: 100%;
+	overflow-y: hidden;
+}
+
+div#pileDisplayModal-body {
+    height: 80%;
+}
+
+.viewPile {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.viewPile img.cardImg {
+    margin-top: 10px;
+}
+
+.logItem:nth-child(2n) {
+    background: var(--mtg-fg-colour);
+}
+
+.logItem:nth-child(2n+1) {
+    background: var(--mtg-input-colour);
+}
+
+.logMessage,
+.logPlayer{
+    text-align: left;
+}
+
+div#logOutput {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.cardCountersContainerOuter {
+    position: absolute;
+    /*width: 100%;*/
+    display: inline-block;
+	width:100px;
+}
+
+.overflownPile .cardCountersContainerOuter{
+	width:35px;
+}
+
+.cardCountersContainer {
+    position: relative;
+    /*width: 100%;*/
+	display: inline-block;
+}
+
+.cardCounter {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid black;
+    margin-right: 5px;
+	margin-bottom: 5px;
+    position: relative;
+}
+
+.playerPile {
+    border: 1px solid black;
+    background: var(--mtg-fg-colour);
+    border-collapse: collapse;
+}
+
+#mainMenu {
+    height: 100vh;
+    padding-top: 25vh;
+}
+
+.menuItemsContainer {
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    background: var(--mtg-fg-colour);
+    border-radius: 4px;
+    height: 50%;
+    text-align: center;
+    padding: 40px;
+}
+
+.mainMenuButton {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+
+
+.menuItemContainer{
+	width:30%;
+	margin:auto;
+	margin-bottom:10px
+}
+
+.menuItemTitle {
+    font-size: 30px;
+}
+
+.viewMenu{
+	padding-top:25vh;
+}
+
+.invalidUsername:after,
+.invalidPassword:after {
+    content: "Invalid Password";
+    color: var(--mtg-invalid-colour);
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+
+.invalidUsername:after {
+    content: "Invalid Username";
+}
+
+
+.pileCount {
+    position: absolute;
+    background: var(--mtg-fg-colour);
+    z-index: 99999;
+    right: 0px;
+    bottom: 10px;
+}
+
+.lifeDisplay {
+    width: 45%;
+    display: inline-block;
+}
+
+#fieldControls {
+    padding: 10px;
+    margin: 0;
+    margin: 10px;
+	display:block;
+}
+
+.stacked{
+	margin-left:-70px;
+}
